@@ -1,0 +1,41 @@
+:root {
+  /* Colors */
+  --color-black: #050505;
+  --color-black-light: #121212;
+  --color-white: #ffffff;
+  --color-white-dim: #f0f0f0;
+  --color-silver: #c0c0c0;
+  --color-silver-light: #e0e0e0;
+  --color-accent: #a0a0a0; /* Metallic accent */
+
+  /* Gradients */
+  --gradient-metallic: linear-gradient(135deg, #e0e0e0 0%, #a0a0a0 50%, #606060 100%);
+  --gradient-dark: linear-gradient(to bottom, #121212, #050505);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(12px);
+
+  /* Typography */
+  --font-primary: 'Outfit', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+[data-theme="light"] {
+  --color-black: #ffffff;
+  --color-black-light: #f5f5f5;
+  --color-white: #050505;
+  --color-white-dim: #1a1a1a;
+  --glass-bg: rgba(0, 0, 0, 0.05);
+  --glass-border: rgba(0, 0, 0, 0.1);
+}

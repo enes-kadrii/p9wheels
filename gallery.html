@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie | P9 Wheels</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="scrolled">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images22/logo3.png" alt="P9 Wheels Logo" style="height: 40px; width: auto; object-fit: contain;">
+            </a>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li><a href="products.html">Produkte</a></li>
+                    <li><a href="gallery.html" style="color: var(--color-silver);">Galerie</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="en/gallery.html" class="lang-switch">EN</a>
+                <a href="contact.html" class="btn btn-primary">Kontakt</a>
+                <button class="mobile-menu-btn"><i class="ph ph-list"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-menu"><i class="ph ph-x"></i></button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Über Uns</a></li>
+            <li><a href="products.html">Produkte</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="text-gradient">Galerie</h1>
+            <p>Unsere neuesten Projekte und exklusivsten Umbauten.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Images will be injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div style="margin-bottom: 1.5rem;">
+                    <img src="assets/images22/logo3.png" alt="P9 Wheels Logo" style="height: 120px; width: auto; object-fit: contain;">
+                </div>
+                <p>Schweizer Präzision. Unverkennbares Design. Kompromisslose Performance.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li><a href="products.html">Produkte</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <p>info@p9wheels.ch</p>
+                <p>+41 52 301 23 45</p>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="https://www.instagram.com/p9_wheels?igsh=MWZqcnluYmw4cW51NQ==" target="_blank" rel="noopener noreferrer"><i class="ph ph-instagram-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 P9 Wheels. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close"><i class="ph ph-x"></i></button>
+        <img src="" alt="Gallery Image Full" id="lightbox-img">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryContainer = document.getElementById('gallery-container');
+            
+            // List of car images from images22 folder
+            const images = [
+                "WhatsApp Image 2026-07-20 at 17.25.41.jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.42 (8).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.42 (9).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.42.jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.43 (1).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.43 (3).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.43 (4).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.43 (5).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.43 (6).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.43.jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.44 (2).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.44 (4).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.44.jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.45 (1).jpeg",
+                "WhatsApp Image 2026-07-20 at 17.25.45.jpeg"
+            ];
+
+            // Render images
+            images.forEach(imgName => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                
+                const img = document.createElement('img');
+                img.src = `assets/images22/${imgName}`;
+                img.alt = 'P9 Wheels Project';
+                img.loading = 'lazy';
+                
+                item.appendChild(img);
+                galleryContainer.appendChild(item);
+
+                // Lightbox logic
+                item.addEventListener('click', () => {
+                    document.getElementById('lightbox-img').src = img.src;
+                    document.getElementById('lightbox').classList.add('active');
+                });
+            });
+
+            // Close lightbox
+            document.querySelector('.lightbox-close').addEventListener('click', () => {
+                document.getElementById('lightbox').classList.remove('active');
+            });
+            document.getElementById('lightbox').addEventListener('click', (e) => {
+                if(e.target.id === 'lightbox') {
+                    document.getElementById('lightbox').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

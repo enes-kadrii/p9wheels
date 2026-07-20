@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | P9 Wheels</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="scrolled">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images22/logo3.png" alt="P9 Wheels Logo" style="height: 40px; width: auto; object-fit: contain;">
+            </a>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li><a href="products.html">Produkte</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="en/contact.html" class="lang-switch">EN</a>
+                <a href="contact.html" class="btn btn-primary">Kontakt</a>
+                <button class="mobile-menu-btn"><i class="ph ph-list"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-menu"><i class="ph ph-x"></i></button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Über Uns</a></li>
+            <li><a href="products.html">Produkte</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="text-gradient">Kontakt</h1>
+            <p>Wir sind für Sie da. Lassen Sie uns über Ihr nächstes Projekt sprechen.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Nehmen Sie <span class="text-gradient">Verbindung</span> auf</h2>
+                    <p>Haben Sie Fragen zu unseren Felgen oder wünschen Sie eine individuelle Beratung? Besuchen Sie unser Felgenwerk oder kontaktieren Sie uns direkt.</p>
+                    
+                    <div class="info-blocks">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ph ph-map-pin"></i></div>
+                            <div class="info-text">
+                                <h4>Adresse</h4>
+                                <p>Felgenwerk Andelfingen<br>Schaubenstrasse 1b<br>8450 Andelfingen, Schweiz</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ph ph-phone"></i></div>
+                            <div class="info-text">
+                                <h4>Telefon</h4>
+                                <p><a href="tel:+41763215005">+41 76 321 50 05</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ph ph-envelope"></i></div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@p9wheels.ch">info@p9wheels.ch</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ph ph-clock"></i></div>
+                            <div class="info-text">
+                                <h4>Öffnungszeiten</h4>
+                                <p>Mo - Fr: 08:00 - 17:30<br>Sa: Nach Vereinbarung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper card">
+                    <h3>Schreiben Sie uns</h3>
+                    <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden.');">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Ihr Name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Ihre Email-Adresse">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Betreff</label>
+                            <select id="subject" name="subject">
+                                <option value="general">Allgemeine Anfrage</option>
+                                <option value="consultation">Beratungstermin</option>
+                                <option value="pricing">Preisanfrage</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Nachricht</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Nachricht Senden</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map Placeholder -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.0203522230073!2d8.679269411964175!3d47.596645999815046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a9cd8f1f543f3%3A0x6e9a0c10b2efd4!2sSchaubenstrasse%201b%2C%208450%20Andelfingen%2C%20Switzerland!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div style="margin-bottom: 1.5rem;">
+                    <img src="assets/images22/logo3.png" alt="P9 Wheels Logo" style="height: 120px; width: auto; object-fit: contain;">
+                </div>
+                <p>Schweizer Präzision. Unverkennbares Design. Kompromisslose Performance.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li><a href="products.html">Produkte</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <p>info@p9wheels.ch</p>
+                <p>+41 52 301 23 45</p>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="https://www.instagram.com/p9_wheels?igsh=MWZqcnluYmw4cW51NQ==" target="_blank" rel="noopener noreferrer"><i class="ph ph-instagram-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 P9 Wheels. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
